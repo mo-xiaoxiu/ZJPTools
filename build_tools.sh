@@ -28,6 +28,7 @@ DEFAULT_INSTALL_PREFIX="/usr/local"
 declare -A REPOSITORIES=(
     ["ZJPThreadLoop"]="https://github.com/mo-xiaoxiu/ZJPThreadLoop.git"
     ["ZJPDnsParser"]="https://github.com/mo-xiaoxiu/ZJPDnsParser.git"
+    ["NMEAParse"]=https://github.com/mo-xiaoxiu/NMEAParse.git
 )
 
 # 编译配置
@@ -118,8 +119,8 @@ create_directories() {
 # 清理构建目录
 clean_build() {
     log_info "Cleaning build directory..."
-    rm -rf "$BUILD_DIR"/*
-    rm -rf "$INSTALL_DIR"/*
+    rm -rf "$BUILD_DIR"/
+    rm -rf "$INSTALL_DIR"/
     log_success "Cleanup completed"
 }
 
